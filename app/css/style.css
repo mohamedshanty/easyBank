@@ -346,6 +346,8 @@ button:hover,
 .hero {
   background-color: hsl(0, 0%, 98%);
   overflow: hidden;
+  position: relative;
+  z-index: 100;
 }
 @media (min-width: 64em) {
   .hero .container {
@@ -448,6 +450,8 @@ button:hover,
 .feature {
   background-color: hsl(220, 16%, 96%);
   text-align: center;
+  position: relative;
+  z-index: -1;
 }
 @media (min-width: 40em) {
   .feature {

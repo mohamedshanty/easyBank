@@ -1,6 +1,8 @@
 .hero {
   background-color: $veryLightGray;
   overflow: hidden;
+  position: relative;
+  z-index: 100;
 
   .container {
     @include breakpoints-up(large) {
