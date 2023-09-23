@@ -23,9 +23,9 @@ body {
     font-size: $font-med;
   }
 
-  &.noscroll {
-    overflow: hidden;
-  }
+  // &.noscroll {
+  //   overflow: hidden;
+  // }
 }
 
 // Text
@@ -137,20 +137,33 @@ a:hover {
 // Buttons
 button,
 .button {
+  position: relative;
   display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: linear-gradient(to right, $limeGreen, $brightCyan);
-  border: none;
+  border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: $white;
   font-weight: 400;
   font-size: $font-sm;
-  color: $white;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 
-  &:hover {
-    opacity: 0.75;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
 

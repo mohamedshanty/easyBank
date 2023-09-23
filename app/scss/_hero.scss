@@ -1,19 +1,11 @@
 .hero {
   background-color: $veryLightGray;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
 
   .container {
     @include breakpoints-up(large) {
       display: flex;
       align-items: center;
     }
-  }
-
-  @include breakpoints-up(large) {
-    display: flex;
-    align-items: center;
   }
   &-image {
     position: relative;
@@ -25,7 +17,7 @@
 
     @include breakpoints-up(medium) {
       min-height: 25rem;
-      background-position: center 60%;
+      background-position: center 70%;
     }
 
     @include breakpoints-up(large) {
